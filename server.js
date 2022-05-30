@@ -137,13 +137,6 @@ app.post("/api/register", function (req, res) {
 /****  END CRUD ACCOUNT*****/
 
 //test ci cd
-app.get("/api/test", (req, res) => {
-  let sql = "SELECT * FROM account";
-  let query = conn.query(sql, (err, results) => {
-    if (err) throw err;
-    res.send(JSON.stringify({ status: 200, error: null, response: results }));
-  });
-});
 
 //Server listening
 var port = process.env.PORT || 5000;
