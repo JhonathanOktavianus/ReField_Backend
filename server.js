@@ -136,8 +136,6 @@ app.post("/api/register", function (req, res) {
 });
 /****  END CRUD ACCOUNT*****/
 
-//test ci cd
-
 //Server listening
 var port = process.env.PORT || 5000;
 app.listen(port, () => {
