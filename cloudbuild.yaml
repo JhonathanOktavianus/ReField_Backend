@@ -13,4 +13,4 @@ steps:
     - 'DB_PASS=${_DB_PASS}'
     - 'DB_NAME=${_DB_NAME}'
     - 'DB_PORT=${_DB_PORT}'
-timeout: "1600s"
+timeout: "300s"
