@@ -6,11 +6,11 @@ steps:
   args: ["app", "deploy"]
 
 - name: 'gcr.io/cloud-builders/npm'
-  args: ["start", "create-env"]
+  args: ["run", "create-env"]
   env:
     - 'DB_HOST=${_DB_HOST}'
     - 'DB_USER=${_DB_USER}'
     - 'DB_PASS=${_DB_PASS}'
     - 'DB_NAME=${_DB_NAME}'
     - 'DB_PORT=${_DB_PORT}'
-timeout: "300s"
+timeout: "1600s"
