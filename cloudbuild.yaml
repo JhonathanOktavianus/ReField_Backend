@@ -3,7 +3,7 @@ steps:
   args: ['install']
 
 - name: 'gcr.io/cloud-builders/npm'
-  args: ["run", "create-env"]
+  args: ["start", "create-env"]
   env:
     - 'DB_HOST=${_DB_HOST}'
     - 'DB_USER=${_DB_USER}'
