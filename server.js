@@ -104,7 +104,21 @@ app.delete("/api/accounts/:id", (req, res) => {
 });
 
 //LOGIN USERTS
+app.post("/api/login", function (req, res) {
+  let sql = "SELECT * FROM account WHERE email = ?  AND password = ? LIMIT 1";
 
+  conn.query(sql, [req.body.email, md5(req.body.password)], (err, results) => {
+    if (err) throw err;
+    res.send(
+      JSON.stringify({
+        status: 200,
+        error: null,
+        response: results,
+        token: uuid.v4(),
+      })
+    );
+  });
+});
 
 //post account
 app.post("/api/register", function (req, res) {
